@@ -1,0 +1,856 @@
+1
+00:00:00,000 --> 00:00:03,960
+ [MUSIC PLAYING]
+
+2
+00:00:03,960 --> 00:00:05,040
+ Hey there, everyone.
+
+3
+00:00:05,040 --> 00:00:06,840
+ My name is Hitesh, and I'll be your guide
+
+4
+00:00:06,840 --> 00:00:08,760
+ for this entire series.
+
+5
+00:00:08,760 --> 00:00:11,280
+ So welcome to the series on Go Lang,
+
+6
+00:00:11,280 --> 00:00:14,000
+ a series that's going to start from absolute scratch,
+
+7
+00:00:14,000 --> 00:00:17,640
+ absolute basics, and it's going to go with a lot of in-depth
+
+8
+00:00:17,640 --> 00:00:19,840
+ and behind the scenes of Go language.
+
+9
+00:00:19,840 --> 00:00:23,480
+ Now, Go is truly an amazing, powerful programming language,
+
+10
+00:00:23,480 --> 00:00:26,220
+ which is very impressive and modernly designed.
+
+11
+00:00:26,220 --> 00:00:28,320
+ And one thing that's especially amazing about the Go
+
+12
+00:00:28,320 --> 00:00:31,440
+ is whether you are a programmer in the very initial phase
+
+13
+00:00:31,440 --> 00:00:33,100
+ of writing the code, or you're somebody
+
+14
+00:00:33,100 --> 00:00:36,580
+ who is way more advanced, have written years and years
+
+15
+00:00:36,580 --> 00:00:38,620
+ of code, you're going to still love this.
+
+16
+00:00:38,620 --> 00:00:41,080
+ And this is already a code, a language, which
+
+17
+00:00:41,080 --> 00:00:42,560
+ is already in the production.
+
+18
+00:00:42,560 --> 00:00:44,040
+ And people are just loving it.
+
+19
+00:00:44,040 --> 00:00:47,200
+ And you will know the reason that why they are loving it
+
+20
+00:00:47,200 --> 00:00:49,000
+ by the end of this series.
+
+21
+00:00:49,000 --> 00:00:51,540
+ So without further ado, let's go ahead and get started
+
+22
+00:00:51,540 --> 00:00:54,400
+ and begin our official journey to become Gophers.
+
+23
+00:00:54,400 --> 00:00:57,600
+ Yeah, we call people who write code as Gophers,
+
+24
+00:00:57,600 --> 00:00:59,480
+ just like there are Pythonistas.
+
+25
+00:00:59,480 --> 00:01:01,760
+ There is-- we got Gophers.
+
+26
+00:01:01,760 --> 00:01:05,160
+ So Go is also termed as the next-gen programming language.
+
+27
+00:01:05,160 --> 00:01:06,960
+ Some people also go to the length
+
+28
+00:01:06,960 --> 00:01:08,920
+ and say that if C would have been designed
+
+29
+00:01:08,920 --> 00:01:11,180
+ in the present era, this would be it.
+
+30
+00:01:11,180 --> 00:01:13,760
+ This is how powerful the Go language is.
+
+31
+00:01:13,760 --> 00:01:15,680
+ And you're going to very soon understand
+
+32
+00:01:15,680 --> 00:01:18,800
+ that a lot of languages bring up the features over the time.
+
+33
+00:01:18,800 --> 00:01:20,720
+ And some of these languages don't
+
+34
+00:01:20,720 --> 00:01:23,400
+ come up to utilize the true power of the cloud
+
+35
+00:01:23,400 --> 00:01:24,520
+ infrastructure.
+
+36
+00:01:24,520 --> 00:01:25,960
+ And that is one of the reasons why
+
+37
+00:01:25,960 --> 00:01:28,520
+ Golang is getting so much of popularity.
+
+38
+00:01:28,520 --> 00:01:30,840
+ And this language is already in production.
+
+39
+00:01:30,840 --> 00:01:33,120
+ So I'll bring up a little bit of the theory
+
+40
+00:01:33,120 --> 00:01:34,120
+ in the initial videos.
+
+41
+00:01:34,120 --> 00:01:36,280
+ Then we're going to just go ahead, write some code.
+
+42
+00:01:36,280 --> 00:01:38,200
+ We'll read some documentation and have fun
+
+43
+00:01:38,200 --> 00:01:40,480
+ in writing code in the Golang.
+
+44
+00:01:40,480 --> 00:01:42,440
+ So let me go ahead and officially get started
+
+45
+00:01:42,440 --> 00:01:43,840
+ and answer some of your questions,
+
+46
+00:01:43,840 --> 00:01:45,480
+ because these are the common ones which
+
+47
+00:01:45,480 --> 00:01:48,720
+ appears as you go initially in the language itself.
+
+48
+00:01:48,720 --> 00:01:51,080
+ First, is this language compiled?
+
+49
+00:01:51,080 --> 00:01:52,920
+ Or is it interpreted?
+
+50
+00:01:52,920 --> 00:01:54,600
+ Or is it somewhat in between?
+
+51
+00:01:54,600 --> 00:01:56,840
+ In case you don't know, just a quick sidebar.
+
+52
+00:01:56,840 --> 00:01:58,120
+ The languages can be compiled.
+
+53
+00:01:58,120 --> 00:01:59,960
+ Like, every code is being read at first.
+
+54
+00:01:59,960 --> 00:02:02,640
+ And then an output file is being created, like an exe.
+
+55
+00:02:02,640 --> 00:02:03,760
+ And then you just run that.
+
+56
+00:02:03,760 --> 00:02:04,920
+ It's really fast.
+
+57
+00:02:04,920 --> 00:02:07,680
+ Or it can be interpreted, just like JavaScript code
+
+58
+00:02:07,680 --> 00:02:08,800
+ runs line by line.
+
+59
+00:02:08,800 --> 00:02:11,800
+ Or it can be somewhat in between, just like Java does.
+
+60
+00:02:11,800 --> 00:02:14,400
+ Now, what is the difference between the Golang and Java
+
+61
+00:02:14,400 --> 00:02:17,800
+ and other languages is that Golang is compiled.
+
+62
+00:02:17,800 --> 00:02:20,800
+ In the languages which are in between, like Java,
+
+63
+00:02:20,800 --> 00:02:22,960
+ it just doesn't get compiled.
+
+64
+00:02:22,960 --> 00:02:26,080
+ It just gives you some of the intermediate binaries.
+
+65
+00:02:26,080 --> 00:02:29,560
+ And it expects that any machine who is going to run this code
+
+66
+00:02:29,560 --> 00:02:33,520
+ should have this virtual machine installed, or also known as JVM.
+
+67
+00:02:33,520 --> 00:02:35,160
+ Not the case with the Golang.
+
+68
+00:02:35,160 --> 00:02:37,440
+ Golang actually handles that way differently.
+
+69
+00:02:37,440 --> 00:02:39,080
+ It just compiles everything.
+
+70
+00:02:39,080 --> 00:02:42,160
+ And runtime is baked into the final product.
+
+71
+00:02:42,160 --> 00:02:44,080
+ So as long as you have just Go installed,
+
+72
+00:02:44,080 --> 00:02:46,040
+ you don't need any JVM or any kind of thing.
+
+73
+00:02:46,040 --> 00:02:48,400
+ And you just go ahead and run that.
+
+74
+00:02:48,400 --> 00:02:50,120
+ Now, this is what we do that.
+
+75
+00:02:50,120 --> 00:02:53,960
+ Now, not only that, Golang actually gives you some set of tools
+
+76
+00:02:53,960 --> 00:02:54,880
+ that you can utilize.
+
+77
+00:02:54,880 --> 00:02:57,720
+ And we're going to talk about them way end of this course,
+
+78
+00:02:57,720 --> 00:03:00,960
+ that how these tools can actually be utilized.
+
+79
+00:03:00,960 --> 00:03:03,040
+ And you're going to take so much advantage of it.
+
+80
+00:03:03,040 --> 00:03:07,240
+ Because there is a lot of control which just Golang-widge takes
+
+81
+00:03:07,240 --> 00:03:09,760
+ from the operating system and literally gives it to you,
+
+82
+00:03:09,760 --> 00:03:11,260
+ especially in the cases of threads.
+
+83
+00:03:11,260 --> 00:03:13,680
+ We're going to talk about them way later on.
+
+84
+00:03:13,680 --> 00:03:14,800
+ But this is all about it.
+
+85
+00:03:14,800 --> 00:03:17,800
+ Executables are exported at the compile time.
+
+86
+00:03:17,800 --> 00:03:21,760
+ And Go gives you whole options to produce the compiled output
+
+87
+00:03:21,760 --> 00:03:24,880
+ or the final executables for Windows, for Linux, and for Mac.
+
+88
+00:03:24,880 --> 00:03:26,240
+ And there are options for that.
+
+89
+00:03:26,240 --> 00:03:27,780
+ And definitely, we'll be doing that.
+
+90
+00:03:27,780 --> 00:03:29,080
+ That is so much fun to do.
+
+91
+00:03:29,080 --> 00:03:30,920
+ Another thing is what.
+
+92
+00:03:30,920 --> 00:03:33,200
+ This is really important.
+
+93
+00:03:33,200 --> 00:03:36,000
+ What and where I can use Golang?
+
+94
+00:03:36,000 --> 00:03:37,040
+ What can I build with it?
+
+95
+00:03:37,040 --> 00:03:38,400
+ Where can I use it?
+
+96
+00:03:38,400 --> 00:03:41,960
+ And the good thing is that Golang is already in production.
+
+97
+00:03:41,960 --> 00:03:43,560
+ And that is the biggest advantage
+
+98
+00:03:43,560 --> 00:03:45,880
+ that any language has ever seen.
+
+99
+00:03:45,880 --> 00:03:49,280
+ This language is already moving into the Dropbox, a whole lot
+
+100
+00:03:49,280 --> 00:03:52,880
+ of Google ecosystem, and a whole lot of cloud infrastructure.
+
+101
+00:03:52,880 --> 00:03:54,280
+ A lot of companies are using it.
+
+102
+00:03:54,280 --> 00:03:56,480
+ And they are shrinking up their machines
+
+103
+00:03:56,480 --> 00:03:57,960
+ that they were previously managing.
+
+104
+00:03:57,960 --> 00:04:00,600
+ If they were managing five or six machines,
+
+105
+00:04:00,600 --> 00:04:02,960
+ now they are shrinking it down to just two machines or one
+
+106
+00:04:02,960 --> 00:04:03,320
+ machine.
+
+107
+00:04:03,320 --> 00:04:05,740
+ And later on, I'm going to give you more examples of that.
+
+108
+00:04:05,740 --> 00:04:07,840
+ And that is the beauty about the Golang.
+
+109
+00:04:07,840 --> 00:04:09,440
+ It is already in production.
+
+110
+00:04:09,440 --> 00:04:11,320
+ And that's why people love it so much.
+
+111
+00:04:11,320 --> 00:04:12,520
+ Moving on.
+
+112
+00:04:12,520 --> 00:04:15,600
+ Now, this is one of the mistakes that I would like to just warn
+
+113
+00:04:15,600 --> 00:04:17,040
+ you up here.
+
+114
+00:04:17,040 --> 00:04:19,800
+ Please don't bring in any baggage with this language.
+
+115
+00:04:19,800 --> 00:04:21,960
+ And what does I mean by that baggage?
+
+116
+00:04:21,960 --> 00:04:24,800
+ Surely, if you have coded in any other programming language,
+
+117
+00:04:24,800 --> 00:04:26,600
+ that experience always helps you,
+
+118
+00:04:26,600 --> 00:04:28,240
+ no matter what the language is.
+
+119
+00:04:28,240 --> 00:04:31,120
+ But bringing up those mindset that, you know,
+
+120
+00:04:31,120 --> 00:04:33,840
+ this language doesn't have a switch and case
+
+121
+00:04:33,840 --> 00:04:35,320
+ statement or something else--
+
+122
+00:04:35,320 --> 00:04:36,640
+ no, it doesn't have.
+
+123
+00:04:36,640 --> 00:04:38,480
+ And it shouldn't have, because the mindset
+
+124
+00:04:38,480 --> 00:04:41,400
+ with this language's design is really different.
+
+125
+00:04:41,400 --> 00:04:43,600
+ And it took me a long time to finally understand that.
+
+126
+00:04:43,600 --> 00:04:46,440
+ And I'll show you and share this experience with you as well.
+
+127
+00:04:46,440 --> 00:04:48,560
+ But please don't bring any baggage.
+
+128
+00:04:48,560 --> 00:04:50,600
+ This language misses out a lot of features
+
+129
+00:04:50,600 --> 00:04:53,000
+ that you are kind of familiar in writing.
+
+130
+00:04:53,000 --> 00:04:54,800
+ But you don't need them in this language.
+
+131
+00:04:54,800 --> 00:04:56,920
+ This is entirely a different language.
+
+132
+00:04:56,920 --> 00:04:59,760
+ And surely, if you have written any code in C, Java, Python,
+
+133
+00:04:59,760 --> 00:05:01,800
+ JavaScript, Pascal, anything, it's
+
+134
+00:05:01,800 --> 00:05:04,120
+ surely going to help you, because the syntax of most
+
+135
+00:05:04,120 --> 00:05:07,120
+ programming languages, common things like creating
+
+136
+00:05:07,120 --> 00:05:10,360
+ variables, constant, loops, and conditionals
+
+137
+00:05:10,360 --> 00:05:11,680
+ are very much similar.
+
+138
+00:05:11,680 --> 00:05:13,040
+ Minor differences here and there,
+
+139
+00:05:13,040 --> 00:05:13,960
+ which I'm going to talk about.
+
+140
+00:05:13,960 --> 00:05:15,680
+ So please don't bring any baggage.
+
+141
+00:05:15,680 --> 00:05:17,400
+ And rest, I'll take care of that.
+
+142
+00:05:17,400 --> 00:05:18,080
+ Moving on.
+
+143
+00:05:18,080 --> 00:05:19,960
+ Is this language object-oriented?
+
+144
+00:05:19,960 --> 00:05:22,320
+ Kind of yes and no.
+
+145
+00:05:22,320 --> 00:05:25,240
+ According to the true definition of object-oriented programming
+
+146
+00:05:25,240 --> 00:05:27,120
+ language, you should have classes.
+
+147
+00:05:27,120 --> 00:05:28,120
+ You should have object.
+
+148
+00:05:28,120 --> 00:05:29,560
+ We don't have classes in Golang.
+
+149
+00:05:29,560 --> 00:05:33,040
+ We have structs, which is kind of an alternative for classes.
+
+150
+00:05:33,040 --> 00:05:35,920
+ We also don't have any kind of overloading.
+
+151
+00:05:35,920 --> 00:05:37,840
+ Like, we don't have operator overloading.
+
+152
+00:05:37,840 --> 00:05:39,720
+ We don't have method overloading.
+
+153
+00:05:39,720 --> 00:05:41,640
+ Some people call that as overriding as well.
+
+154
+00:05:41,640 --> 00:05:43,320
+ No, we don't have any of that thing.
+
+155
+00:05:43,320 --> 00:05:46,680
+ What you see is directly on the code itself.
+
+156
+00:05:46,680 --> 00:05:47,960
+ And you can understand that.
+
+157
+00:05:47,960 --> 00:05:50,720
+ That's one of the principles I'll discuss later on with you,
+
+158
+00:05:50,720 --> 00:05:53,640
+ that Golang is designed with simplicity in mind,
+
+159
+00:05:53,640 --> 00:05:55,360
+ that what you see on the code, you can just
+
+160
+00:05:55,360 --> 00:05:58,040
+ decide what's about to happen by looking at the code.
+
+161
+00:05:58,040 --> 00:05:59,200
+ There is no prerequisite.
+
+162
+00:05:59,200 --> 00:06:01,540
+ You don't need to understand that whether this language
+
+163
+00:06:01,540 --> 00:06:02,800
+ supports overriding or not.
+
+164
+00:06:02,800 --> 00:06:03,680
+ That is not the case.
+
+165
+00:06:03,680 --> 00:06:05,680
+ This is not how this language is designed.
+
+166
+00:06:05,680 --> 00:06:08,520
+ So there are differences here, which I'm going to eventually
+
+167
+00:06:08,520 --> 00:06:09,440
+ tell you all that.
+
+168
+00:06:09,440 --> 00:06:11,040
+ But I know these are common questions
+
+169
+00:06:11,040 --> 00:06:13,640
+ you want to know as you start a journey for a programming
+
+170
+00:06:13,640 --> 00:06:14,400
+ language.
+
+171
+00:06:14,400 --> 00:06:17,480
+ So I want to just clear them up right in the very first video.
+
+172
+00:06:17,480 --> 00:06:18,800
+ Moving on.
+
+173
+00:06:18,800 --> 00:06:20,480
+ What is missing in this language?
+
+174
+00:06:20,480 --> 00:06:22,040
+ In fact, a lot.
+
+175
+00:06:22,040 --> 00:06:23,720
+ A lot is missing in this language,
+
+176
+00:06:23,720 --> 00:06:26,480
+ but not in the terms that this language is lagging.
+
+177
+00:06:26,480 --> 00:06:28,480
+ This language is missing a whole lot of things,
+
+178
+00:06:28,480 --> 00:06:30,640
+ especially like a lot of people point that out.
+
+179
+00:06:30,640 --> 00:06:32,200
+ The try-catch is missing.
+
+180
+00:06:32,200 --> 00:06:33,920
+ And a lot of people even write articles
+
+181
+00:06:33,920 --> 00:06:36,400
+ that how you can mimic the try and catch.
+
+182
+00:06:36,400 --> 00:06:38,480
+ Honest answer, you should never.
+
+183
+00:06:38,480 --> 00:06:40,800
+ This language is not designed like the other languages,
+
+184
+00:06:40,800 --> 00:06:42,240
+ so there is no try-catch.
+
+185
+00:06:42,240 --> 00:06:43,640
+ And you will never need that.
+
+186
+00:06:43,640 --> 00:06:45,240
+ And that's what it is missing.
+
+187
+00:06:45,240 --> 00:06:48,200
+ A lot of time, you're going to see that there are no try-catch.
+
+188
+00:06:48,200 --> 00:06:50,000
+ And also, you're going to see a lexer is
+
+189
+00:06:50,000 --> 00:06:51,440
+ doing a lot of work for you.
+
+190
+00:06:51,440 --> 00:06:53,080
+ For example, don't worry.
+
+191
+00:06:53,080 --> 00:06:55,000
+ I'll explain this as we write code.
+
+192
+00:06:55,000 --> 00:06:57,280
+ You don't write semicolons in this language.
+
+193
+00:06:57,280 --> 00:06:59,660
+ And I'm going to walk you through with the documentation
+
+194
+00:06:59,660 --> 00:07:03,280
+ as well, that the documentation says you should be writing it.
+
+195
+00:07:03,280 --> 00:07:06,480
+ But actually, the longer goal is to understand
+
+196
+00:07:06,480 --> 00:07:09,680
+ that why this lexer is there and what help it is providing.
+
+197
+00:07:09,680 --> 00:07:12,600
+ For example, even if you don't write semicolon,
+
+198
+00:07:12,600 --> 00:07:14,140
+ it's not going to give you any error,
+
+199
+00:07:14,140 --> 00:07:16,560
+ because lexer actually provides you all of that.
+
+200
+00:07:16,560 --> 00:07:18,720
+ I know this is going quite a lot in depth of it.
+
+201
+00:07:18,720 --> 00:07:21,040
+ And we are already going in depth of it.
+
+202
+00:07:21,040 --> 00:07:23,480
+ And we haven't yet started to write any of the code.
+
+203
+00:07:23,480 --> 00:07:25,400
+ But I'm pretty sure this has answered
+
+204
+00:07:25,400 --> 00:07:28,560
+ a couple of your questions, gave you a good mindset
+
+205
+00:07:28,560 --> 00:07:30,080
+ to get started with the Golang.
+
+206
+00:07:30,080 --> 00:07:33,400
+ And that's all I want to you from this very first video.
+
+207
+00:07:33,400 --> 00:07:36,160
+ In the next video, we're going to see the home page of Golang.
+
+208
+00:07:36,160 --> 00:07:38,080
+ And we're going to just go ahead and see
+
+209
+00:07:38,080 --> 00:07:39,920
+ what are the tools and everything that we're
+
+210
+00:07:39,920 --> 00:07:42,360
+ going to require to write all of these things.
+
+211
+00:07:42,360 --> 00:07:44,640
+ And from there, we're going to get started.
+
+212
+00:07:44,640 --> 00:07:48,240
+ Let's go ahead and catch up in the next video.
+
+213
+00:07:48,240 --> 00:07:51,600
+ [MUSIC PLAYING]
+
+214
+00:07:51,600 --> 00:08:01,600
+ [BLANK_AUDIO]
+
